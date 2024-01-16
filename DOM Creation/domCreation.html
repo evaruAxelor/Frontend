@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Creation</title>
+    <style>
+        img {
+            border-radius: 9px;
+        }
+
+        li {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Apps</h2>
+    <ol id="apps">
+    </ol>
+    <script>
+        const apps = [
+            {   
+                ig : "./images/nf.jpeg",
+                name : "Netflix"
+            },
+            {   
+                ig : "./images/amazon.webp",
+                name : "Amazon Prime",
+            },
+            {   
+                ig : "./images/disney.jpeg",
+                name : "Hotstar"
+            }
+        ]
+        let app = "";
+        apps.map((index,item) => {
+            app += "<li><img src='"+apps[item].ig+"'/ height='40px' width='40px'>"+apps[item].name+"</li>";
+        })
+        document.getElementById("apps").innerHTML = app;
+    </script>
+</body>
+
+</html>
